@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest" lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>استضافة GoldHEN PS4 9.00 بواسطة 4GAMER</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<script>
+history.replaceState(null, null, 'index.html');
+var histlength = history.length;
+history.go(-histlength);
+
+function DLProgress(e) {
+  Percent = (Math.round(e.loaded / e.total * 100));
+  setTimeout(function () {
+    window.msgs.innerHTML = "جارٍ تثبيت الملفات للعمل بدون إنترنت: " + Percent + "%";
+  }, 500);
+}
+
+function DisplayCacheProgress() {
+  setTimeout(function () {
+    window.msgs.innerHTML = "تم التثبيت بنجاح ✔";
+  }, 1500);
+  setTimeout(function () {
+    window.msgs.innerHTML = "الآن أغلق وأعد فتح المتصفح ...";
+  }, 3500);
+}
+
+window.applicationCache.addEventListener("progress", DLProgress, false);
+window.applicationCache.oncached = function (e) { DisplayCacheProgress(); };
+window.applicationCache.onupdateready = function (e) { DisplayCacheProgress(); };
+</script>
+
+<h1>استضافة GoldHEN PS4 9.00 بواسطة 4GAMER</h1>
+<hr>
+<br>
+<h1 id="msgs" style="font-size: 30px; margin-top: 77px; margin-bottom: 455px;">الرجاء الانتظار...</h1>
+
+<h1 style="margin-top: 43px;">
+  شكر خاص إلى:
+  <a href="https://twitter.com/sleirsgoevy" style="color: #f31414; margin: 0 10px;">@sleirsgoevy</a>
+  ChendoChap
+  <a href="https://twitter.com/Znullptr" style="color: #f31414; margin: 0 10px;">@Znullptr</a>
+  SiSTR0
+</h1>
+</body>
+</html>
